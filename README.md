@@ -1,7 +1,7 @@
 # LibraryVectorMatrix
 
 
-This project has some different functions to perform some operations between complex numbers and complex spaces.
+This project has some different functions to perform some operations between complex numbers, vectors and matrix.
 
 ### Complex Vectors
 - Additions.
@@ -12,11 +12,11 @@ This project has some different functions to perform some operations between com
 - Distance.
 
 ```
-a = np.array([complex_number, complex_number])
-b = np.array([complex_number, complex_number])
+a = np.array([complex_number, complex_number]) (Vector)
+b = np.array([complex_number, complex_number]) (Vector)
 e = scalar
-function_name(a, b) (Operations between vectors)
-function_name(e,a) (Operations between vectors and scalars)
+function(a, b) (Operations between vectors)
+function(e,a) (Operations between vectors and scalars)
 ```
 
 ### Complex Matrix
@@ -28,11 +28,11 @@ function_name(e,a) (Operations between vectors and scalars)
 - Verify that a matrix is hermitian.
 
 ```
-a = np.array([[complex_number, complex_number], [complex_number, complex_number]])
-b = np.array([[complex_number, complex_number], [complex_number, complex_number]])
+a = np.array([[complex_number, complex_number], [complex_number, complex_number]]) (Matrix)
+b = np.array([[complex_number, complex_number], [complex_number, complex_number]]) (Matrix)
 e = scalar
-function_name(a, b) (Operations between matrix)
-function_name(e, a)(Operations between matrix and scalars)
+function(a, b) (Operations between matrix)
+function(e, a) (Operations between matrix and scalars)
 ```
 
 ### Functions for complex Matrix Vectors and Matrix
