@@ -46,6 +46,30 @@ def addMatrix(a, b):
         return None
 
 
+def inverseMatrix(a, b):
+    if a.shape == b.shape:
+        c = [[] for k in range(len(a))]
+        for i in range(len(a)):
+            for j in range(len(a[i])):
+                c[i].append(a[i][j] - b[i][j])
+        c = np.array(c)
+        return c
+
+    else:
+        return None
+
+
+def escalarMatrix(e, a):
+    c = []
+    for i in range(len(a)):
+        fila = []
+        for j in range(len(a[i])):
+            fila.append(e * a[i])
+        c.append(fila)
+    c = np.array(c)
+    return c
+
+
 def transpV(a):
     c = [[] for i in range(len(a))]
     for i in range(len(a)):

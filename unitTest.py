@@ -26,9 +26,13 @@ class TestStringMethods(unittest.TestCase):
     def test_sub(self):
         subsP, subsNP = cvm.inversVect(a, b), np.subtract(a, b)
         self.assertEqual(subsP.all(), subsNP.all())
+        subsP, subsNP = cvm.inverseMatrix(a1, b1), np.subtract(a1, b1)
+        self.assertEqual(subsP.all(), subsNP.all())
 
     def test_escalar(self):
         escalarP, escalarNP = cvm.escalarVect(2, b), b * 2
+        self.assertEqual(escalarP.all(), escalarNP.all())
+        escalarP, escalarNP = cvm.escalarMatrix(2, b1), b1 * 2
         self.assertEqual(escalarP.all(), escalarNP.all())
 
     def test_transp(self):
@@ -52,6 +56,9 @@ class TestStringMethods(unittest.TestCase):
 
     def test_norm(self):
         self.assertEqual(cvm.normVect(c), np.linalg.norm(c))
+
+    def test_distance(self):
+        self.assertEqual(cvm.distanceVect(a, b), np.linalg.norm(a-b))
 
     def test_unitary(self):
         self.assertTrue(cvm.unitary(matrix))
